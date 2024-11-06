@@ -21,7 +21,8 @@ const handleMenuClick = async (info: chrome.contextMenus.OnClickData, tab?: chro
   if (info.menuItemId === MENU_ID && tab?.id) {
     const response = await chrome.tabs.sendMessage(tab.id, { action: ACTION_GET_SELECTED_DOM }).catch((error) => ({ error }));
     if (response.html) {
-      sendMessage(response.html);
+      console.log(response.html);
+      // sendMessage(response.html);
       return;
     }
 
