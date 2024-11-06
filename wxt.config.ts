@@ -8,6 +8,6 @@ export default defineConfig({
   manifest: {
     name: 'Web to notes',
     description: 'Export web content to notes',
-    permissions: ['contextMenus']
+    permissions: ['contextMenus', 'nativeMessaging']
   }
 });
